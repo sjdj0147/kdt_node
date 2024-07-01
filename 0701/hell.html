@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function red(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='red';
+                    resolve()
+                }, 500);
+            });
+        }
+        function orange(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='orange';
+                    resolve('orange')
+                }, 500);
+
+            })
+        }
+        function yellow(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='yellow';
+                    resolve('yellow')
+                }, 500);
+            })
+        }
+        function green(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='green';
+                    resolve('green')
+                }, 500);
+            })
+        }
+        function blue(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='blue';
+                    resolve('blue')
+                }, 500);
+            })
+        }
+        function indigo(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='indigo';
+                    resolve('indigo')
+                }, 500);
+            })
+        }
+        function perple(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    document.body.style.backgroundColor='perple';
+                    resolve('perple')
+                }, 500);
+            });
+        }
+
+        async function exec(){
+            await red();
+            await orange();
+            await yellow();
+            await green();
+            await blue();
+            await indigo();
+            await perple();
+        }
+        exec();
+    </script>
+</body>
+</html>
